@@ -48,13 +48,6 @@
             ko.applyBindings(model);
         });
 
-        function aleks() {
-            model.reservations.push({
-                ReservationId:666,
-                ClientName:"test location",
-                Location:"test name"
-            });
-        }
         function handleEditorClick() {
             sendAjaxRequest("POST", function (newItem) {
                 model.reservations.push(newItem);
@@ -115,5 +108,4 @@
     @*<div id="editor" class="section panel panel-primary">
         @Html.Partial("Editor", new Reservation())
     </div>*@
-    <button onclick="aleks();">Get LAes</button>
 }
